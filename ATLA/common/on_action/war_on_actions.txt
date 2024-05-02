@@ -1,0 +1,103 @@
+scope:attacker = {
+			create_character_memory = {
+				type = war_won
+				participants = {
+					loser = scope:defender
+					winner = scope:attacker
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = offensive
+				OUTCOME = won
+				SELF = attacker
+				OTHER = defender
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = 5
+					}
+				}
+			}
+		
+		scope:defender = {
+			create_character_memory = {
+				type = war_lost
+				participants = {
+					winner = scope:attacker
+					loser = scope:defender
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = defensive
+				OUTCOME = lost
+				SELF = defender
+				OTHER = attacker
+			}
+			if = {
+			limit = {has_trait = lifestyle_weapons
+			}
+			add_trait_xp = {
+				add_trait_xp = {
+					trait = lifestyle_weapons
+					value = -25
+				}
+			}
+		}
+	}
+}
+
+		scope:attacker = {
+			create_character_memory = {
+				type = war_lost
+				participants = {
+					winner = scope:defender
+					loser = scope:attacker
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = offensive
+				OUTCOME = lost
+				SELF = attacker
+				OTHER = defender
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = -25
+					}
+				}
+			}
+		
+		scope:defender = {
+			create_character_memory = {
+				type = war_won
+				participants = {
+					loser = scope:attacker
+					winner = scope:defender
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = defensive
+				OUTCOME = won
+				SELF = defender
+				OTHER = attacker
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = 5
+					}
+				}
+			}
+		}
+	}

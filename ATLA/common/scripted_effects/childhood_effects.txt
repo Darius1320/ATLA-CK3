@@ -3,13 +3,13 @@
 gain_jing_effect = { 
 		random_list = {
 			10 = {
-				add_trait = { positive_jing }
+				add_trait = positive_jing 
 			}
 			10 = {
-				add_trait = { negative_jing }
+				add_trait = negative_jing 
 			}
 			10 = {
-				add_trait = { neutral_jing }
+				add_trait = neutral_jing 
 			}
 		}		
 }
