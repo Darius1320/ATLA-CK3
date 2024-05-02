@@ -21,4 +21,15 @@ bending_commander_decision_effect = {
 
 bending_commander_effect = { add_trait = bending_commander }
 
+lifestyle_weapons_decision_effect = {
+    custom_tooltip = {
+        text = lifestyle_weapons_decision_effect_tooltip
+    }
+    effect = {
+        lifestyle_weapons_effect = yes
+    }
+}
+
+lifestyle_weapons_effect = { add_trait = lifestyle_weapons }
+
 # Minor Decisions

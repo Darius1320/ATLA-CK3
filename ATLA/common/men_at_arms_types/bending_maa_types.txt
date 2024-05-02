@@ -30,12 +30,7 @@ Benders = {
 	}
 
 	can_recruit = {
-		OR = { 
-		has_trait = lifestyle_fire_bender
-        has_trait = lifestyle_water_bender
-        has_trait = lifestyle_air_bender
-        has_trait = lifestyle_earth_bender
-		}
+		has_trait = bending_commander
 	}
 	
 	buy_cost = { gold = 200 }

@@ -921,8 +921,11 @@ metal_bending = {
 # Non-genetic Bending Traits
 
 lifestyle_weapons = {
-	potential = {
-		has_trait = trait_blademaster_3
+		potential = {
+         has_trait_xp = {
+            trait = lifestyle_blademaster
+            value = 100
+		}
 	}
 
 	category = lifestyle
@@ -1267,7 +1270,7 @@ bending_commander = {
 			has_trait = lifestyle_earth_bender
 		}
 
-	category = commander
+	category = lifestyle
 	icon = bending_commander.dds
 
 	# Modifiers

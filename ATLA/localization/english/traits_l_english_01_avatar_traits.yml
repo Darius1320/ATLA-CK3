@@ -190,6 +190,15 @@
  bending_important_event.02.desc:0 "After a couple years of training you're ready to go out in the field and show your enemies what you're made of."
  bending_important_event.02.title:0 "Elemental Commander!"
  bending_important_event.02.a:0 "Eureka!"
+ lifestyle_weapons_decision:0 "Expand your horizons"
+ lifestyle_weapons_decision_effect_tooltip:0 "You become a Weapons Novice."
+ lifestyle_weapons_decision_desc:0 "Learn how to wield more than a blade."
+ lifestyle_weapons_decision_valid_description:0 "Max out Blademaster trait."
+ lifestyle_weapons_decision_confirm:0 "I'm ready."
+ lifestyle_weapons_decision_selection_tooltip:0 "Are you ready to truly become a Weapons Master?"
+ bending_important_event.03.desc:0 "After becoming a master of the blade you're ready to expand your horizons to all weapons."
+ bending_important_event.03.title:0 "Epiphany!"
+ bending_important_event.03.a:0 "Eureka!"
 
 
 

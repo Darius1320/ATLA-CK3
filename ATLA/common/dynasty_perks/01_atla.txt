@@ -1,6 +1,6 @@
 ﻿# BENDING LEGACY
 
-bending_legacy_1 = { # Talented Commanders
+bending_legacy_1 = { # Born Commanders
 	legacy = bending_legacy_track
 
 	can_be_picked = {
@@ -54,7 +54,7 @@ bending_legacy_1 = { # Talented Commanders
 	}
 }
 
-bending_legacy_2 = { # Lasting Line
+bending_legacy_2 = { # Bending Army
 	legacy = bending_legacy_track
 
 	can_be_picked = {
@@ -81,15 +81,9 @@ bending_legacy_2 = { # Lasting Line
 	effect = {
 		custom_description_no_bullet = { text = bending_legacy_2_ct_effect }
 	}
-
-	character_modifier = {
-		county_opinion_add = 5
-		monthly_county_control_growth_add = 0.1
-	}
-
 }
 
-bending_legacy_3 = { # Rightful Rulers
+bending_legacy_3 = { # Family Practice
 	legacy = bending_legacy_track
 
 	can_be_picked = {
@@ -122,7 +116,7 @@ bending_legacy_3 = { # Rightful Rulers
 	}
 }
 
-bending_legacy_4 = { # Divine Mandate
+bending_legacy_4 = { # Bending Masters
 	legacy = bending_legacy_track
 
 	can_be_picked = {
@@ -156,7 +150,7 @@ bending_legacy_4 = { # Divine Mandate
 	}
 }
 
-bending_legacy_5 = { # Specialty
+bending_legacy_5 = { # Few Chosen
 	legacy = bending_legacy_track
 
 	can_be_picked = {

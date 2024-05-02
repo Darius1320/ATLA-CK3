@@ -54,3 +54,39 @@ bending_important_event.02 = {
         name = bending_important_event.02.a
 	}
 }
+
+# Lifestyle Weapons Events
+
+bending_important_event.03 = {
+    type = character_event
+    title = bending_important_event.03.title
+    desc = bending_important_event.03.desc
+    trigger = {
+        has_trait_xp = {
+            trait = lifestyle_blademaster
+            value = 100
+        }
+    }
+    theme = faith
+    right_portrait = {
+        character = ROOT
+        animation = happiness
+    }
+    immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+        lifestyle_weapons_effect = yes
+	}
+    option = {
+        name = bending_important_event.03.a
+	}
+}
+
+# Childhood Events
+
+bending_important_event.04 = {
+	hidden = yes
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+        gain_jing_effect = yes	
+        }
+}
