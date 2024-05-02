@@ -1,0 +1,56 @@
+# Spirituality Events
+
+namespace = bending_important_event
+bending_important_event.01 = {
+    type = character_event
+    title = bending_important_event.01.title
+    desc = bending_important_event.01.desc
+    trigger = {
+        OR = {
+        has_trait = lifestyle_fire_bender
+        has_trait = lifestyle_water_bender
+        has_trait = lifestyle_air_bender
+        has_trait = lifestyle_earth_bender
+        }
+    }
+    theme = faith
+    right_portrait = {
+        character = ROOT
+        animation = happiness
+    }
+    immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+        gain_spirituality_effect = yes
+	}
+    option = {
+        name = bending_important_event.01.a
+	}
+}
+
+# Commander Events
+
+bending_important_event.02 = {
+    type = character_event
+    title = bending_important_event.02.title
+    desc = bending_important_event.02.desc
+    trigger = {
+        OR = {
+        has_trait = lifestyle_fire_bender
+        has_trait = lifestyle_water_bender
+        has_trait = lifestyle_air_bender
+        has_trait = lifestyle_earth_bender
+        }
+    }
+    theme = faith
+    right_portrait = {
+        character = ROOT
+        animation = happiness
+    }
+    immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+        bending_commander_effect = yes
+	}
+    option = {
+        name = bending_important_event.02.a
+	}
+}

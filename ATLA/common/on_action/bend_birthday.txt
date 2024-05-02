@@ -1,0 +1,158 @@
+﻿#Pulses
+on_birthday = {
+	on_actions = {
+		fire_exp_on_action
+		water_exp_on_action
+		air_exp_on_action
+		earth_exp_on_action
+		a_spiritualiity_exp_on_action
+	}
+}
+
+#Bending Experience
+
+fire_exp_on_action = {
+	trigger = {
+		has_trait = lifestyle_fire_bender
+		NOT = {
+		    has_trait_xp = {
+		    	trait = lifestyle_fire_bender
+			value >= 100
+			}
+		}
+	}
+	effect = {
+		random_list = {
+			10 = {
+				add_trait_xp = {
+					trait = lifestyle_fire_bender
+					value = 1
+				}
+			}
+			2 = {
+				add_trait_xp = {
+					trait = lifestyle_fire_bender
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+water_exp_on_action = {
+	trigger = {
+		has_trait = lifestyle_water_bender
+		NOT = {
+		    has_trait_xp = {
+		    	trait = lifestyle_water_bender
+			value >= 100
+			}
+		}
+	}
+	effect = {
+		random_list = {
+			10 = {
+				add_trait_xp = {
+					trait = lifestyle_water_bender
+					value = 1
+				}
+			}
+			2 = {
+				add_trait_xp = {
+					trait = lifestyle_water_bender
+					value = 2
+				}
+			}
+		}
+	}
+
+}
+
+air_exp_on_action = {
+	trigger = {
+		has_trait = lifestyle_air_bender
+		NOT = {
+		    has_trait_xp = {
+		    	trait = lifestyle_air_bender
+			value >= 100
+			}
+		}
+	}
+	effect = {
+		random_list = {
+			10 = {
+				add_trait_xp = {
+					trait = lifestyle_air_bender
+					value = 1
+				}
+			}
+			2 = {
+				add_trait_xp = {
+					trait = lifestyle_air_bender
+					value = 2
+				}
+			}
+		}
+	}
+
+}
+
+earth_exp_on_action = {
+	trigger = {
+		has_trait = lifestyle_earth_bender
+		NOT = {
+		    has_trait_xp = {
+		    	trait = lifestyle_earth_bender
+			value >= 100
+			}
+		}
+	}
+	effect = {
+		random_list = {
+			10 = {
+				add_trait_xp = {
+					trait = lifestyle_earth_bender
+					value = 1
+				}
+			}
+			2 = {
+				add_trait_xp = {
+					trait = lifestyle_earth_bender
+					value = 2
+				}
+			}
+		}
+	}
+
+}
+
+a_spirituality_exp_on_action = {
+	trigger = {
+		has_trait = lifestyle_a_spirituality
+		NOT = {
+		    has_trait_xp = {
+		    	trait = lifestyle_a_spirituality
+			value >= 100
+			}
+		}
+	}
+	effect = {
+		random_list = {
+			10 = {
+				add_trait_xp = {
+					trait = lifestyle_a_spirituality
+					value = 0
+				}
+			}
+			2 = {
+				add_trait_xp = {
+					trait = lifestyle_a_spirituality
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+
+

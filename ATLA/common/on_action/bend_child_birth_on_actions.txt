@@ -1,0 +1,197 @@
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = scope:child.dynasty
+					scope:child.dynasty = { has_dynasty_perk = bending_legacy_5 }
+					OR = { # The child must have a real parent of the Dynasty...
+						scope:mother.dynasty = scope:child.dynasty
+						scope:real_father.dynasty = scope:child.dynasty
+					}
+				}
+				if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_combustion_bending
+						}
+						NOR = {
+							has_trait = lightning_redirection
+							has_trait = lightning_generation
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = combustion_bending
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_lightning_generation
+						}
+						NOR = {
+							has_trait = combustion_bending
+							has_trait = lightning_redirection
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = lightning_generation
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_lightning_redirection
+						}
+						NOR = {
+							has_trait = combustion_bending
+							has_trait = lightning_generation
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = lightning_redirection
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_water_healing
+						}
+						NOT = {
+							has_trait = blood_bending
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = water_healing
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_blood_bending
+						}
+						NOT = {
+							has_trait = water_healing
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = blood_bending
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_weightlessness
+						}
+						NOR = {
+							has_trait = sound_bending
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = weightlessness
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_sound_bending
+						}
+						NOR = {
+							has_trait = weightlessness
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = sound_bending
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_seismic_sense
+						}
+						NOR = {
+							has_trait = lava_bending
+							has_trait = metal_bending
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = seismic_sense
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_lava_bending
+						}
+						NOR = {
+							has_trait = seismic_sense
+							has_trait = metal_bending
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = lava_bending
+					}
+				}
+				else_if = {
+					limit = {
+						scope:child.dynasty = {
+							exists = var:bending_legacy_5_metal_bending
+						}
+						NOT = {
+							has_trait = lava_bending
+						}
+					}
+					random = {
+						chance = bending_legacy_5_chance
+						modifier = {
+							add = bending_legacy_5_extra_player_chance
+							any_parent = { is_ai = no }
+						}
+						add_trait = metal_bending
+					}
+				}
+			}
+		}

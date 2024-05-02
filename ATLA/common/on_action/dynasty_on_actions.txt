@@ -1,0 +1,16 @@
+hidden_effect = {
+			if = {
+				limit = {
+					exists = scope:dynasty
+					scope:dynasty = { has_dynasty_perk = bending_legacy_1 }
+				}
+			}
+				if = {
+					limit = {
+						scope:dynasty = {
+							exists = var:bending_legacy_1_bending_commander
+						}
+					}
+						add_trait = bending_commander
+				}
+			}

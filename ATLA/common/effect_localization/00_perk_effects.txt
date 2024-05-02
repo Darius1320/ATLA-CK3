@@ -1,0 +1,25 @@
+bending_legacy_1_ct_effect = {
+	global = bending_legacy_1_ct
+	first = bending_legacy_1_ct
+	third = bending_legacy_1_ct
+}
+bending_legacy_2_ct_effect = {
+	global = bending_legacy_2_ct
+	first = bending_legacy_2_ct
+	third = bending_legacy_2_ct
+}
+bending_legacy_3_ct_effect = {
+	global = bending_legacy_3_ct
+	first = bending_legacy_3_ct
+	third = bending_legacy_3_ct
+}
+bending_legacy_4_ct_effect = {
+	global = bending_legacy_4_ct
+	first = bending_legacy_4_ct
+	third = bending_legacy_4_ct
+}
+bending_legacy_5_ct_effect = {
+	global = bending_legacy_5_ct
+	first = bending_legacy_5_ct
+	third = bending_legacy_5_ct
+}

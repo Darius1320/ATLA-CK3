@@ -1,0 +1,24 @@
+﻿# Major Decisions
+gain_spirituality_decision_effect = {
+    custom_tooltip = {
+        text = gain_spirituality_decision_effect_tooltip
+    }
+    effect = {
+        gain_spirituality_effect = yes
+    }
+}
+
+gain_spirituality_effect = { add_trait = lifestyle_a_spirituality }
+
+bending_commander_decision_effect = {
+    custom_tooltip = {
+        text = bending_commander_decision_effect_tooltip
+    }
+    effect = {
+        bending_commander_effect = yes
+    }
+}
+
+bending_commander_effect = { add_trait = bending_commander }
+
+# Minor Decisions

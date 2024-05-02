@@ -1,0 +1,51 @@
+# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 5.0
+
+Benders = {
+	type = heavy_infantry
+	icon = benders
+	
+	damage = 65
+	toughness = 20	
+	pursuit = 20
+	screen = 20
+	
+	#era_bonus = {
+	#	culture_era_high_medieval = {
+	#		damage = 1
+	#		toughness = 1
+	#	}
+	#	culture_era_late_medieval = {
+	#		damage = 2
+	#		toughness = 2
+	#	}
+	#}
+
+	counters = {
+		heavy_infantry = 1
+		pikemen = 1
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		OR = { 
+		has_trait = lifestyle_fire_bender
+        has_trait = lifestyle_water_bender
+        has_trait = lifestyle_air_bender
+        has_trait = lifestyle_earth_bender
+		}
+	}
+	
+	buy_cost = { gold = 200 }
+	low_maintenance_cost = { gold = 1 }
+	high_maintenance_cost = { gold = 4 }
+	
+	max_sub_regiments = 5
+
+	allowed_in_hired_troops = no
+	
+	stack = 50
+	ai_quality = { value = culture_ai_weight_heavy_infantry }
+}

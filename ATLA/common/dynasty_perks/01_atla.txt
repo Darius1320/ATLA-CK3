@@ -1,0 +1,201 @@
+﻿# BENDING LEGACY
+
+bending_legacy_1 = { # Talented Commanders
+	legacy = bending_legacy_track
+
+	can_be_picked = {
+		OR = {
+                has_trait_xp = {
+                    trait = lifestyle_fire_bender
+                    value >= 30
+                }
+                has_trait_xp = {
+                    trait = lifestyle_water_bender
+                    value >= 30
+                }
+                has_trait_xp = {
+                    trait = lifestyle_air_bender
+                    value >= 30
+                }
+                has_trait_xp = {
+                    trait = lifestyle_earth_bender
+                    value >= 30
+				}
+			}
+		traits = { bending_commander = 100 }
+	}
+
+		effect = {
+		# Tell the player they'll unlock the elemental commander trait
+		custom_description_no_bullet = { text = bending_legacy_1_ct_effect }
+	}
+
+	character_modifier = {
+		county_opinion_add = 5
+		monthly_county_control_growth_add = 0.1
+	}
+
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				dynasty = {
+					dynasty_prestige_level >= high_dynasty_prestige_level
+				}
+			}
+			multiply = 10
+		}
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+bending_legacy_2 = { # Lasting Line
+	legacy = bending_legacy_track
+
+	can_be_picked = {
+		OR = {
+			has_trait_xp = {
+				trait = lifestyle_fire_bender
+				value >= 65
+				}
+				has_trait_xp = {
+				trait = lifestyle_water_bender
+				value >= 65
+				}
+				has_trait_xp = {
+				trait = lifestyle_air_bender
+				value >= 65
+				}
+				has_trait_xp = {
+				trait = lifestyle_earth_bender
+				value >= 65
+				}
+			}
+	}
+
+	effect = {
+		custom_description_no_bullet = { text = bending_legacy_2_ct_effect }
+	}
+
+	character_modifier = {
+		county_opinion_add = 5
+		monthly_county_control_growth_add = 0.1
+	}
+
+}
+
+bending_legacy_3 = { # Rightful Rulers
+	legacy = bending_legacy_track
+
+	can_be_picked = {
+		OR = {
+			has_trait_xp = {
+				trait = lifestyle_fire_bender
+				value >= 65
+				}
+				has_trait_xp = {
+				trait = lifestyle_water_bender
+				value >= 65
+				}
+				has_trait_xp = {
+				trait = lifestyle_air_bender
+				value >= 65
+				}
+				has_trait_xp = {
+				trait = lifestyle_earth_bender
+				value >= 65
+				}
+			}
+	}
+
+	effect = {
+		custom_description_no_bullet = { text = bending_legacy_3_ct_effect }
+	}
+
+	character_modifier = {
+		dynasty_opinion = 5
+	}
+}
+
+bending_legacy_4 = { # Divine Mandate
+	legacy = bending_legacy_track
+
+	can_be_picked = {
+		OR = {
+			has_trait_xp = {
+				trait = lifestyle_fire_bender
+				value >= 100
+				}
+				has_trait_xp = {
+				trait = lifestyle_water_bender
+				value >= 100
+				}
+				has_trait_xp = {
+				trait = lifestyle_air_bender
+				value >= 100
+				}
+				has_trait_xp = {
+				trait = lifestyle_earth_bender
+				value >= 100
+				}
+			}
+	}
+
+	effect = {
+		custom_description_no_bullet = { text = bending_legacy_4_ct_effect }
+	}
+
+	character_modifier = {
+		county_opinion_add = 5
+		monthly_county_control_growth_add = 0.1
+	}
+}
+
+bending_legacy_5 = { # Specialty
+	legacy = bending_legacy_track
+
+	can_be_picked = {
+		OR = {
+			has_trait_xp = {
+				trait = lifestyle_fire_bender
+				value >= 100
+				}
+				has_trait_xp = {
+				trait = lifestyle_water_bender
+				value >= 100
+				}
+				has_trait_xp = {
+				trait = lifestyle_air_bender
+				value >= 100
+				}
+				has_trait_xp = {
+				trait = lifestyle_earth_bender
+				value >= 100
+				}
+			}
+	}
+
+	effect = {
+		# Tell the player they can gain special bending trait
+		custom_description_no_bullet = { text = bending_legacy_5_ct_effect }
+	}
+
+	traits = {
+		combustion_bending = 40
+		lightning_generation = 40
+		lightning_redirection = 20
+		water_healing = 50
+		blood_bending = 50
+		weightlessness = 50
+		sound_bending = 50
+		seismic_sense = 50
+		lava_bending = 50
+		metal_bending = 50
+	}
+}
+

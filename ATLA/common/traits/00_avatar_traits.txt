@@ -1,0 +1,1396 @@
+# Genetic Bending Traits
+
+lifestyle_fire_bender = {
+	      opposites = {
+		lifestyle_air_bender
+		lifestyle_water_bender
+		lifestyle_earth_bender
+		water_healing
+		blood_bending
+		weightlessness
+		sound_bending
+		seismic_sense
+		lava_bending
+		metal_bending
+		chi_blocker
+	}
+
+	category = lifestyle
+	icon = fire_bender.dds
+
+	# Modifiers
+	
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0.2
+	random_creation = 0.2
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 70
+
+	martial = 1
+	prowess = 1
+	
+	
+	track = {
+		30 = {
+			martial = 1
+			prowess = 1
+			health = 0.1
+			negate_health_penalty_add = 0.1
+		}
+		65 = {
+			martial = 1
+			prowess = 2
+			#attacker_advantage = 5
+			raid_speed = 0.2
+			health = 0.15
+			negate_health_penalty_add = 0.15
+			life_expectancy = 5
+		}
+		100 = {
+			martial = 3
+			prowess = 6
+			#attacker_advantage = 10
+			raid_speed = 0.4
+			health = 0.2
+			negate_health_penalty_add = 0.25
+			life_expectancy = 5
+			years_of_fertility = 5
+			no_prowess_loss_from_age = yes
+		}
+			
+	}
+	
+	ruler_designer_cost = 80
+	
+	# AI Values
+	ai_rationality = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			#Legendary Fire Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_fire_bender
+						value >= 100
+					}
+				}
+				desc = trait_fire_bender_4
+			}
+			#Expert Fire Bender
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_fire_bender
+						value >= 65
+					}
+				}
+				desc = trait_fire_bender_3
+			}
+			#Proficient Fire Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_fire_bender
+						value >= 30
+					}
+				}
+				desc = trait_fire_bender_2
+			}
+			#Fire Bender
+			desc = trait_fire_bender_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_fire_bender_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_fire_bender
+						value >= 100
+					}
+				}
+				desc = trait_fire_bender_4_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_fire_bender
+						value >= 65
+					}
+				}
+				desc = trait_fire_bender_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lifestyle_fire_bender
+						value >= 30
+					}
+				}
+				desc = trait_fire_bender_2_character_desc
+			}
+			desc = trait_fire_bender_1_character_desc
+		}
+	}
+
+}
+
+lifestyle_water_bender = {
+	      opposites = {
+		lifestyle_air_bender
+		lifestyle_fire_bender
+		lifestyle_earth_bender
+		combustion_bending
+		lightning_generation
+		lightning_redirection
+		weightlessness
+		sound_bending
+		seismic_sense
+		lava_bending
+		metal_bending
+		chi_blocker
+	}
+
+	category = lifestyle
+	icon = water_bender.dds
+
+	# Modifiers
+	
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0.2
+	random_creation = 0.2
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 70
+
+	diplomacy = 1
+	health = 0.15
+	
+	
+	track = {
+		30 = {
+			diplomacy = 1
+			prowess = 1
+			health = 0.15
+			negate_health_penalty_add = 0.1
+		}
+		65 = {
+			diplomacy = 1
+			prowess = 1
+			naval_movement_speed_mult = 0.1
+			health = 0.2
+			negate_health_penalty_add = 0.15
+			life_expectancy = 5
+			years_of_fertility = 5
+		}
+		100 = {
+			diplomacy = 3
+			prowess = 4
+			naval_movement_speed_mult = 0.15
+			health = 0.3
+			negate_health_penalty_add = 0.25
+			life_expectancy = 5
+			years_of_fertility = 5
+			no_prowess_loss_from_age = yes
+		}
+			
+	}
+	
+	ruler_designer_cost = 80
+	
+	# AI Values
+	ai_rationality = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			#Legendary Water Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_water_bender
+						value >= 100
+					}
+				}
+				desc = trait_water_bender_4
+			}
+			#Expert Water Bender
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_water_bender
+						value >= 65
+					}
+				}
+				desc = trait_water_bender_3
+			}
+			#Proficient Water Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_water_bender
+						value >= 30
+					}
+				}
+				desc = trait_water_bender_2
+			}
+			#Fire Bender
+			desc = trait_water_bender_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_water_bender_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_water_bender
+						value >= 100
+					}
+				}
+				desc = trait_water_bender_4_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_water_bender
+						value >= 65
+					}
+				}
+				desc = trait_water_bender_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lifestyle_water_bender
+						value >= 30
+					}
+				}
+				desc = trait_water_bender_2_character_desc
+			}
+			desc = trait_water_bender_1_character_desc
+		}
+	}
+
+}
+
+lifestyle_air_bender = {
+	      opposites = {
+		lifestyle_water_bender
+		lifestyle_fire_bender
+		lifestyle_earth_bender
+		combustion_bending
+		lightning_generation
+		lightning_redirection
+		water_healing
+		blood_bending
+		seismic_sense
+		lava_bending
+		metal_bending
+		chi_blocker
+	}
+
+	category = lifestyle
+	icon = air_bender.dds
+
+	# Modifiers
+	
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0.2
+	random_creation = 0.2
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 70
+
+	learning = 1
+	character_travel_speed = 5
+	
+	
+	track = {
+		30 = {
+			learning = 1
+			prowess = 2
+			health = 0.1
+			character_travel_speed = 5
+			negate_health_penalty_add = 0.1
+		}
+		65 = {
+			learning = 1
+			prowess = 2
+			character_travel_speed = 5
+			health = 0.1
+			negate_health_penalty_add = 0.1
+			life_expectancy = 5
+		}
+		100 = {
+			learning = 3
+			prowess = 4
+			character_travel_speed = 15
+			health = 0.2
+			negate_health_penalty_add = 0.2
+			life_expectancy = 5
+			no_prowess_loss_from_age = yes
+		}
+			
+	}
+	
+	ruler_designer_cost = 80
+	
+	# AI Values
+	ai_rationality = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			#Legendary Air Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_air_bender
+						value >= 100
+					}
+				}
+				desc = trait_air_bender_4
+			}
+			#Expert Air Bender
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_air_bender
+						value >= 65
+					}
+				}
+				desc = trait_air_bender_3
+			}
+			#Proficient Air Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_air_bender
+						value >= 30
+					}
+				}
+				desc = trait_air_bender_2
+			}
+			#Air Bender
+			desc = trait_air_bender_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_air_bender_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_air_bender
+						value >= 100
+					}
+				}
+				desc = trait_air_bender_4_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_air_bender
+						value >= 65
+					}
+				}
+				desc = trait_air_bender_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lifestyle_air_bender
+						value >= 30
+					}
+				}
+				desc = trait_air_bender_2_character_desc
+			}
+			desc = trait_air_bender_1_character_desc
+		}
+	}
+
+}
+
+lifestyle_earth_bender = {
+	      opposites = {
+		lifestyle_water_bender
+		lifestyle_fire_bender
+		lifestyle_air_bender
+		combustion_bending
+		lightning_generation
+		lightning_redirection
+		water_healing
+		blood_bending
+		weightlessness
+		sound_bending
+		chi_blocker
+	}
+
+	category = lifestyle
+	icon = earth_bender.dds
+
+	# Modifiers
+	
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0.2
+	random_creation = 0.2
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 70
+
+	stewardship = 1
+	prowess = 2
+	build_speed = -0.05
+	build_gold_cost = -0.05
+	character_travel_safety = 5
+	
+	track = {
+		30 = {
+			stewardship = 1
+			prowess = 2
+			build_speed = -0.05
+			build_gold_cost = -0.05
+			character_travel_safety = 5
+			health = 0.1
+			negate_health_penalty_add = 0.1
+		}
+		65 = {
+			stewardship = 1
+			prowess = 2
+			#defender_advantage = 5
+			build_speed = -0.05
+			build_gold_cost = -0.05
+			character_travel_safety = 5
+			health = 0.1
+			negate_health_penalty_add = 0.1
+			life_expectancy = 5
+		}
+		100 = {
+			stewardship = 3
+			prowess = 4
+			#defender_advantage = 10
+			build_speed = -0.05
+			build_gold_cost = -0.05
+			character_travel_safety = 15
+			health = 0.2
+			negate_health_penalty_add = 0.2
+			life_expectancy = 5
+			no_prowess_loss_from_age = yes
+		}
+			
+	}
+	
+	ruler_designer_cost = 80
+	
+	# AI Values
+	ai_rationality = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			#Legendary Earth Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_earth_bender
+						value >= 100
+					}
+				}
+				desc = trait_earth_bender_4
+			}
+			#Expert Earth Bender
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_earth_bender
+						value >= 65
+					}
+				}
+				desc = trait_earth_bender_3
+			}
+			#Proficient Earth Bender
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_earth_bender
+						value >= 30
+					}
+				}
+				desc = trait_earth_bender_2
+			}
+			#Earth Bender
+			desc = trait_earth_bender_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_earth_bender_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_earth_bender
+						value >= 100
+					}
+				}
+				desc = trait_earth_bender_4_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_earth_bender
+						value >= 65
+					}
+				}
+				desc = trait_earth_bender_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lifestyle_earth_bender
+						value >= 30
+					}
+				}
+				desc = trait_earth_bender_2_character_desc
+			}
+			desc = trait_earth_bender_1_character_desc
+		}
+	}
+
+}
+
+# Special Bending Traits
+
+combustion_bending = {
+	potential = { has_trait = lifestyle_fire_bender }
+	opposites = {
+		lifestyle_water_bender
+		lifestyle_air_bender
+		lifestyle_earth_bender
+	}
+
+	icon = combustion_bending.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+	
+	prowess = 8
+	health = -0.2
+	dread_baseline_add = 5
+	dread_gain_mult = 0.25
+	siege_phase_time = -0.4
+	raid_speed = 0.5
+	life_expectancy = -30
+
+	desc = trait_combustion_bending_desc
+}
+
+lightning_generation = {
+	potential = { has_trait = lifestyle_fire_bender }	
+	opposites = {
+		lifestyle_water_bender
+		lifestyle_air_bender
+		lifestyle_earth_bender
+	}
+
+	icon = lightning_generation.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+	
+	prowess = 12
+	health = -0.1
+	dread_baseline_add = 15
+	owned_hostile_scheme_success_chance_add = 10
+	life_expectancy = -5
+
+	desc = trait_lightning_generation_desc
+}
+
+lightning_redirection = {
+	potential = { has_trait = lifestyle_fire_bender }	
+	opposites = {
+		lifestyle_water_bender
+		lifestyle_air_bender
+		lifestyle_earth_bender
+	}
+
+	icon = lightning_redirection.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	stress_loss_mult = 0.1
+	stress_gain_mult = -0.5
+	hostile_scheme_resistance_add = 20
+	life_expectancy = 5
+
+	desc = trait_lightning_redirection_desc
+}
+
+water_healing = {
+	potential = { has_trait = lifestyle_water_bender }
+	opposites = {
+		lifestyle_fire_bender
+		lifestyle_air_bender
+		lifestyle_earth_bender
+	}
+
+	icon = water_healing.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	stress_loss_mult = 0.2
+	hostile_scheme_resistance_add = 10
+	health = 0.4
+	negate_health_penalty_add = 0.6
+
+	life_expectancy = 20
+
+	desc = trait_water_healing_desc
+}
+
+blood_bending = {
+	potential = { has_trait = lifestyle_water_bender }
+	opposites = {
+		lifestyle_fire_bender
+		lifestyle_air_bender
+		lifestyle_earth_bender
+	}
+
+	icon = blood_bending.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	prowess = 8
+	stress_gain_mult = 0.2
+	stress_loss_mult = -0.2
+	hostile_scheme_power_mult = 0.2
+	owned_hostile_scheme_success_chance_add = 10
+	owned_scheme_secrecy_add = -10
+	dread_baseline_add = 25
+	health = 0.1
+	negate_health_penalty_add = 0.3
+
+	life_expectancy = 5
+
+	desc = trait_blood_bending_desc
+}
+
+weightlessness = {
+	potential = { has_trait = lifestyle_air_bender }
+	opposites = {
+		lifestyle_fire_bender
+		lifestyle_water_bender
+		lifestyle_earth_bender
+	}
+
+	icon = weightlessness.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	stress_gain_mult = -0.4
+	stress_loss_mult = 0.4
+	character_travel_speed = 40
+	character_travel_safety = 40
+
+	life_expectancy = 5
+
+	desc = trait_weightlessness_desc
+}
+
+sound_bending = {
+	potential = { has_trait = lifestyle_air_bender }
+	opposites = {
+		lifestyle_fire_bender
+		lifestyle_water_bender
+		lifestyle_earth_bender
+	}
+
+	icon = sound_bending.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	prowess = 3
+	dread_baseline_add = 10
+	intrigue = 3
+	owned_hostile_scheme_success_chance_add = 20
+
+	desc = trait_sound_bending_desc
+}
+
+seismic_sense = {
+	potential = { has_trait = lifestyle_earth_bender }
+	opposites = {
+		lifestyle_fire_bender
+		lifestyle_water_bender
+		lifestyle_air_bender
+	}
+
+	icon = seismic_sense.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	hostile_scheme_resistance_mult = 0.25
+	character_travel_safety = 20
+
+	life_expectancy = 5
+
+	desc = trait_seismic_sense_desc
+}
+
+lava_bending = {
+	potential = { has_trait = lifestyle_earth_bender }
+	opposites = {
+		lifestyle_fire_bender
+		lifestyle_water_bender
+		lifestyle_air_bender
+	}
+
+	icon = lava_bending.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	prowess = 8
+	siege_phase_time = -0.4
+	health = -0.1
+
+	life_expectancy = -5
+
+	desc = trait_lava_bending_desc
+}
+
+metal_bending = {
+	potential = { 
+		AND = {
+			has_trait = lifestyle_earth_bender
+			has_trait = seismic_sense
+		}
+	}
+	opposites = {
+		lifestyle_fire_bender
+		lifestyle_water_bender
+		lifestyle_air_bender
+	}
+
+	icon = metal_bending.dds
+
+	physical = yes
+	genetic = yes
+	good = yes
+
+	birth = 0
+	inherit_chance = 0
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+
+	prowess = 10
+	siege_phase_time = -0.1
+	health = 0.2
+	character_travel_safety = 20
+
+	desc = trait_metal_bending_desc
+}
+
+# Non-genetic Bending Traits
+
+lifestyle_weapons = {
+	potential = {
+		has_trait = trait_blademaster_3
+	}
+
+	category = lifestyle
+	icon = weapons.dds
+
+	# Modifiers
+	
+	physical = yes
+
+	random_creation = 0.1
+
+	prowess = 2
+	health = 0.05
+	negate_health_penalty_add = 0.05
+	
+	track = {
+		50 = {
+			prowess = 2
+			health = 0.05
+			negate_health_penalty_add = 0.05
+		}
+		100 = {
+			prowess = 2
+			#defender_advantage = 5
+			#attacker_advantage = 5
+			health = 0.05
+			negate_health_penalty_add = 0.05
+		}
+			
+	}
+	
+	ruler_designer_cost = 50
+	
+	# AI Values
+	ai_rationality = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			#Weapons Master
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_weapons
+						value >= 100
+					}
+				}
+				desc = trait_weapons_3
+			}
+			#Weapons Expert
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_weapons
+						value >= 50
+					}
+				}
+				desc = trait_weapons_2
+			}
+			#Weapons Novice
+			desc = trait_weapons_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_weapons_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_weapons
+						value >= 100
+					}
+				}
+				desc = trait_weapons_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lifestyle_weapons
+						value >= 50
+					}
+				}
+				desc = trait_weapons_2_character_desc
+			}
+			desc = trait_weapons_1_character_desc
+		}
+	}
+
+}
+
+chi_blocker = {
+	opposites = {
+		lifestyle_water_bender
+		lifestyle_fire_bender
+		lifestyle_air_bender
+		lifestyle_earth_bender
+	}
+
+	icon = chi_blocker.dds
+
+	physical = yes
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+	
+	prowess = 8
+	dread_baseline_add = 10
+	dread_gain_mult = 0.20
+
+	random_creation = 0.05
+
+	desc = trait_chi_blocker_desc
+}
+
+positive_jing = {
+	opposites = {
+		negative_jing
+		neutral_jing
+	}
+
+	icon = positive_jing.dds
+
+	physical = yes
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+
+	same_opinion = 5	
+	prowess = 3
+
+	random_creation = 0.3
+
+	desc = trait_positive_jing_desc
+}
+
+negative_jing = {
+	opposites = {
+		neutral_jing
+		positive_jing
+	}
+
+	icon = negative_jing.dds
+
+	physical = yes
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+
+	same_opinion = 10	
+	prowess = 3
+
+	random_creation = 0.3
+
+	desc = trait_negative_jing_desc
+}
+
+neutral_jing = {
+	opposites = {
+		negative_jing
+		positive_jing
+	}
+
+	icon = neutral_jing.dds
+
+	physical = yes
+
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+
+	same_opinion = 10	
+	prowess = 3
+
+	random_creation = 0.3
+
+	desc = trait_neutral_jing_desc
+}
+
+lifestyle_a_spirituality = {
+
+	category = lifestyle
+	icon = a_spirituality.dds
+
+	# Modifiers
+	
+	physical = yes
+
+	learning = 2
+	life_expectancy = 10
+	monthly_lifestyle_xp_gain_mult = 0.1
+	stress_loss_mult = 0.05
+
+	culture_modifier = {
+		parameter = innovation_from_learning_traits
+		cultural_head_fascination_mult = 0.05
+	}
+	
+	track = {
+		30 = {
+			learning = 2
+			life_expectancy = 15
+			monthly_lifestyle_xp_gain_mult = 0.1
+			stress_loss_mult = 0.05
+
+
+
+	culture_modifier = {
+		parameter = innovation_from_learning_traits
+		cultural_head_fascination_mult = 0.05
+	}
+		}
+		65 = {
+			learning = 4
+			life_expectancy = 25
+			monthly_lifestyle_xp_gain_mult = 0.1
+			stress_loss_mult = 0.05
+
+	culture_modifier = {
+		parameter = innovation_from_learning_traits
+		cultural_head_fascination_mult = 0.2
+	}
+		}
+		100 = {
+			learning = 6
+			life_expectancy = 50
+			monthly_lifestyle_xp_gain_mult = 0.1
+			stress_loss_mult = 0.05
+
+	culture_modifier = {
+		parameter = innovation_from_learning_traits
+		cultural_head_fascination_mult = 0.4
+	}
+		}
+			
+	}
+	
+	ruler_designer_cost = 400
+	
+	# AI Values
+	ai_rationality = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			#All Seeing Spiritualist
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_a_spirituality
+						value >= 100
+					}
+				}
+				desc = trait_a_spirituality_4
+			}
+			#Elder Spiritualist
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_a_spirituality
+						value >= 65
+					}
+				}
+				desc = trait_a_spirituality_3
+			}
+			#Well Versed Spiritualist
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_a_spirituality
+						value >= 30
+					}
+				}
+				desc = trait_a_spirituality_2
+			}
+			#Spiritualist
+			desc = trait_a_spirituality_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_a_spirituality_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_a_spirituality
+						value >= 100
+					}
+				}
+				desc = trait_a_spirituality_4_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_a_spirituality
+						value >= 65
+					}
+				}
+				desc = trait_a_spirituality_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lifestyle_a_spirituality
+						value >= 30
+					}
+				}
+				desc = trait_a_spirituality_2_character_desc
+			}
+			desc = trait_a_spirituality_1_character_desc
+		}
+	}
+
+}
+
+# Commander Traits 
+
+bending_commander = {
+		OR = {
+			has_trait = lifestyle_fire_bender 
+			has_trait = lifestyle_water_bender
+			has_trait = lifestyle_air_bender
+			has_trait = lifestyle_earth_bender
+		}
+
+	category = commander
+	icon = bending_commander.dds
+
+	# Modifiers
+
+	martial = 1
+	enemy_hard_casualty_modifier = 0.03
+	hard_casualty_modifier = -0.03
+	
+	track = {
+		30 = {
+			martial = 1
+			#defender_advantage = 2
+			#attacker_advantage = 2
+			enemy_hard_casualty_modifier = 0.03
+			hard_casualty_modifier = -0.03
+			siege_phase_time = -0.05
+		}
+		65 = {
+			martial = 2
+			#defender_advantage = 2
+			#attacker_advantage = 2
+			enemy_hard_casualty_modifier = 0.04
+			hard_casualty_modifier = -0.04
+			siege_phase_time = -0.05
+		}
+		100 = {
+			martial = 2
+			knight_limit = 3
+			#defender_advantage = 4
+			#attacker_advantage = 4
+			enemy_hard_casualty_modifier = 0.1
+			hard_casualty_modifier = -0.1
+			siege_phase_time = -0.05
+		}
+			
+	}
+
+	shown_in_ruler_designer = no
+	ruler_designer_cost = 50
+	
+	# AI Values
+	ai_rationality = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			#Legendary Elemental Commander
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = bending_commander
+						value >= 100
+					}
+				}
+				desc = trait_bending_commander_4
+			}
+			#Expert Elemental Commander
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = bending_commander
+						value >= 65
+					}
+				}
+				desc = trait_bending_commander_3
+			}
+			#Proficient Elemental Commander
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = bending_commander
+						value >= 30
+					}
+				}
+				desc = trait_bending_commander_2
+			}
+			#Elemental Commander
+			desc = trait_bending_commander_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_bending_commander_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = bending_commander
+						value >= 100
+					}
+				}
+				desc = trait_bending_commander_4_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = bending_commander
+						value >= 65
+					}
+				}
+				desc = trait_bending_commander_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = bending_commander
+						value >= 30
+					}
+				}
+				desc = trait_bending_commander_2_character_desc
+			}
+			desc = trait_bending_commander_1_character_desc
+		}
+	}
+
+}

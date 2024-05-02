@@ -1,0 +1,123 @@
+#Spirituality Decision
+
+gain_spirituality_decision = {
+
+    picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    major = yes
+
+    desc = gain_spirituality_decision_desc
+    selection_tooltip = gain_spirituality_decision_selection_tooltip
+
+is_shown = {
+    NOT = {
+        has_trait = lifestyle_a_spirituality
+    }
+    OR = {
+        has_trait = lifestyle_fire_bender
+        has_trait = lifestyle_water_bender
+        has_trait = lifestyle_air_bender
+        has_trait = lifestyle_earth_bender
+    }
+}
+
+    is_valid = {
+        custom_description = {
+            text = gain_spirituality_decision_valid_description
+            OR = {
+                has_trait_xp = {
+                    trait = lifestyle_fire_bender
+                    value = 100
+                }
+                has_trait_xp = {
+                    trait = lifestyle_water_bender
+                    value = 100
+                }
+                has_trait_xp = {
+                    trait = lifestyle_air_bender
+                    value = 100
+                }
+                has_trait_xp = {
+                    trait = lifestyle_earth_bender
+                    value = 100
+                }
+            }
+        }
+    }
+
+    ai_goal = yes
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 100
+    }
+
+    effect = {
+        trigger_event = bending_important_event.01
+        show_as_tooltip = {
+            gain_spirituality_decision_effect = yes
+        }
+    }
+}
+
+# Commander Decisions
+
+bending_commander_decision = {
+
+    picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    major = yes
+
+    desc = bending_commander_decision_desc
+    selection_tooltip = bending_commander_decision_selection_tooltip
+
+is_shown = {
+    NOT = {
+        has_trait = bending_commander
+    }
+    OR = {
+        has_trait = lifestyle_fire_bender
+        has_trait = lifestyle_water_bender
+        has_trait = lifestyle_air_bender
+        has_trait = lifestyle_earth_bender
+    }
+}
+
+    is_valid = {
+        custom_description = {
+            text = bending_commander_decision_valid_description
+            OR = {
+                has_trait_xp = {
+                    trait = lifestyle_fire_bender
+                    value >= 30
+                }
+                has_trait_xp = {
+                    trait = lifestyle_water_bender
+                    value >= 30
+                }
+                has_trait_xp = {
+                    trait = lifestyle_air_bender
+                    value >= 30
+                }
+                has_trait_xp = {
+                    trait = lifestyle_earth_bender
+                    value >= 30
+                }
+            }
+        }
+    }
+
+    ai_goal = yes
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 100
+    }
+
+    effect = {
+        trigger_event = bending_important_event.02
+        show_as_tooltip = {
+            bending_commander_decision_effect = yes
+        }
+    }
+}
