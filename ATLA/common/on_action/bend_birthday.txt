@@ -6,6 +6,7 @@ on_birthday = {
 		air_exp_on_action
 		earth_exp_on_action
 		a_spiritualiity_exp_on_action
+		bending_legacy_4_on_action
 	}
 }
 

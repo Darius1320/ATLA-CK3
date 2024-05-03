@@ -143,11 +143,6 @@ bending_legacy_4 = { # Bending Masters
 	effect = {
 		custom_description_no_bullet = { text = bending_legacy_4_ct_effect }
 	}
-
-	character_modifier = {
-		county_opinion_add = 5
-		monthly_county_control_growth_add = 0.1
-	}
 }
 
 bending_legacy_5 = { # Few Chosen
