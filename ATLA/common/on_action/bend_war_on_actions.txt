@@ -1,0 +1,304 @@
+on_war_won_attacker = {
+	# The war notifications are handled in `effect` instead of `events` due to order of operations.
+	# `effect` fires on THIS tick, `events` fires on the NEXT tick, and the war gets destroyed between this tick and the next.
+	effect = {
+		# Save scopes for localization.
+		scope:attacker = { save_scope_as = winner }
+		scope:defender = { save_scope_as = loser }
+
+		# Run scripted effect that iterates through all players and notifies them if necessary.
+		notify_players_about_neighboring_war_resolution_effect = yes
+		
+		scope:war = {
+			every_war_participant = {
+				if = {
+					limit = {
+						is_ai = yes
+						has_character_flag = delayed_cleanse
+					}
+					trigger_event = { id = game_rule.3 days = 1 }
+				}
+			}
+			fp2_contract_assistance_war_pay_effect = yes # Pay out Contract Assistance money
+		}
+
+		# Add a variable to count recent losses
+		if = {
+			limit = { scope:defender = { has_variable = recently_lost_wars } }
+			scope:defender = {
+				save_temporary_scope_value_as = {
+					name = prev_lost_wars
+					value = var:recently_lost_wars
+				}
+
+				remove_variable = recently_lost_wars
+				set_variable = {
+					name = recently_lost_wars
+					value =  {
+						add = scope:prev_lost_wars
+						add = 1
+					}
+					years = 10
+				}
+			}
+		}
+		else = {
+			scope:defender = {
+				set_variable = {
+					name = recently_lost_wars
+					value =  1
+					years = 10
+				}
+			}
+		}
+
+		# Struggle Catalysts
+		scope:attacker = {
+			if = {
+				limit = {
+					any_character_struggle = {
+						involvement = involved
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_win_any_war_within_the_region
+							CHAR = scope:defender
+						}
+					}
+				}
+				every_character_struggle = {
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_win_any_war_within_the_region
+							CHAR = scope:defender
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_win_any_war_within_the_region
+						character = scope:attacker
+					}
+				}
+			}
+		}
+		
+		scope:attacker = {
+			create_character_memory = {
+				type = war_won
+				participants = {
+					loser = scope:defender
+					winner = scope:attacker
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = offensive
+				OUTCOME = won
+				SELF = attacker
+				OTHER = defender
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = 5
+					}
+				}
+			}
+		
+		scope:defender = {
+			create_character_memory = {
+				type = war_lost
+				participants = {
+					winner = scope:attacker
+					loser = scope:defender
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = defensive
+				OUTCOME = lost
+				SELF = defender
+				OTHER = attacker
+			}
+			if = {
+			limit = {has_trait = lifestyle_weapons
+			}
+			add_trait_xp = {
+				add_trait_xp = {
+					trait = lifestyle_weapons
+					value = -25
+				}
+			}
+		}
+	}
+}
+
+on_war_won_defender = {
+	effect = {
+		# Save scopes for localization.
+		scope:attacker = { save_scope_as = loser }
+		scope:defender = { save_scope_as = winner }
+
+		# Run scripted effect that iterates through all players and notifies them if necessary.
+		notify_players_about_neighboring_war_resolution_effect = yes
+		
+		scope:war = {
+			every_war_participant = {
+				if = {
+					limit = {
+						is_ai = yes
+						has_character_flag = delayed_cleanse
+					}
+					trigger_event = { id = game_rule.3 days = 1 }
+				}
+			}
+			fp2_contract_assistance_war_pay_effect = yes
+		}
+
+		# Add a variable to count recent losses
+		if = {
+			limit = { scope:attacker = {  has_variable = recently_lost_wars } }
+			scope:attacker = {
+				save_temporary_scope_value_as = {
+					name = prev_lost_wars
+					value = var:recently_lost_wars
+				}
+
+				remove_variable = recently_lost_wars
+				set_variable = {
+					name = recently_lost_wars
+					value =  {
+						add = scope:prev_lost_wars
+						add = 1
+					}
+					years = 10
+				}
+			}
+		}
+		else = {
+			scope:attacker = {
+				set_variable = {
+					name = recently_lost_wars
+					value =  1
+					years = 10
+				}
+			}
+		}
+		
+		scope:attacker = {
+			create_character_memory = {
+				type = war_lost
+				participants = {
+					winner = scope:defender
+					loser = scope:attacker
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = offensive
+				OUTCOME = lost
+				SELF = attacker
+				OTHER = defender
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = -25
+					}
+				}
+			}
+		
+		scope:defender = {
+			create_character_memory = {
+				type = war_won
+				participants = {
+					loser = scope:attacker
+					winner = scope:defender
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = defensive
+				OUTCOME = won
+				SELF = defender
+				OTHER = attacker
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+on_war_white_peace = {
+	effect = {
+		scope:war = {
+			every_war_participant = {
+				if = {
+					limit = {
+						is_ai = yes
+						has_character_flag = delayed_cleanse
+					}
+					trigger_event = { id = game_rule.3 days = 1 }
+				}
+			}
+			fp2_contract_assistance_war_pay_effect = yes # Pay out Contract Assistance money
+		}
+		scope:attacker = {
+			create_character_memory = {
+				type = war_white_peace_attacker
+				participants = {
+					attacker = scope:attacker
+					defender = scope:defender
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = offensive
+				OUTCOME = white_peace_attacker
+				SELF = attacker
+				OTHER = defender
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = -10
+					}
+				}
+			}
+		
+		scope:defender = {
+			create_character_memory = {
+				type = war_white_peace_defender
+				participants = {
+					attacker = scope:attacker
+					defender = scope:defender
+				}
+			}
+			set_war_over_memory_casus_belli_effect = {
+				STANCE = defensive
+				OUTCOME = white_peace_defender
+				SELF = defender
+				OTHER = attacker
+			}
+			if = {
+				limit = {has_trait = lifestyle_weapons
+				}
+				add_trait_xp = {
+					add_trait_xp = {
+						trait = lifestyle_weapons
+						value = -10
+					}
+				}
+			}
+		}
+	}
+}
