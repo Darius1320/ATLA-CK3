@@ -1,0 +1,21 @@
+earth_gauntlet_modifier = {
+	health = 0.3
+	prowess = 5
+	dread_baseline_add = 10
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+	hostile_scheme_power_add = 10
+	owned_hostile_scheme_success_chance_add = 10
+	martial = 3
+}
+glider_modifier = {
+	prowess = 2
+	character_travel_speed = 15
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	learning = 3
+}
+fire_nation_a_modifier = {
+	prowess = 4
+	negate_prowess_penalty = 8
+	health = 0.6
+	raid_speed = 0.15
+}

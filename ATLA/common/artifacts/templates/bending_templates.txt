@@ -1,0 +1,80 @@
+﻿earth_gauntlet_template = {
+	can_equip = {
+		always = yes
+	}
+	can_benefit = {
+		has_trait = lifestyle_earth_bender
+	}
+	can_repair = {
+		always = yes
+	}
+	fallback = {
+		monthly_prestige = 0.2 
+	}
+	unique = no
+}
+
+glider_template = {
+	can_equip = {
+		always = yes
+	}
+	can_benefit = {
+		has_trait = lifestyle_air_bender
+	}
+	can_repair = {
+		always = yes
+	}
+	fallback = {
+		monthly_prestige = 0.2 
+	}
+	unique = no
+}
+
+fire_nation_a_template = {
+	can_equip = {
+		always = yes
+	}
+	can_benefit = {
+		has_trait = lifestyle_fire_bender
+	}
+	can_repair = {
+		always = yes
+	}
+	fallback = {
+		monthly_prestige = 0.2 
+	}
+	unique = no
+}
+
+boomerang_template = {
+	can_equip = {
+		always = yes
+	}
+	can_benefit = {
+		has_trait = lifestyle_blademaster
+	}
+	can_repair = {
+		always = yes
+	}
+	fallback = {
+		monthly_prestige = 0.2 
+	}
+	unique = no
+}
+
+water_skin_template = {
+	can_equip = {
+		always = yes
+	}
+	can_benefit = {
+		has_trait = lifestyle_water_bender
+	}
+	can_repair = {
+		always = yes
+	}
+	fallback = {
+		monthly_piety = 0.2 
+	}
+	unique = no
+}
+

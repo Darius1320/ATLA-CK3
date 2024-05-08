@@ -5,3 +5,15 @@ on_6th_birthday = {
 		bending_important_event.04 #Assigns random jing
 	}
 }
+
+childhood_ongoing = {
+	trigger = {
+		is_ruler = yes
+		is_available_child = yes
+	}
+	random_events = {
+		chance_to_happen = 50
+		400 = 0
+		100 = bending_important_event.05 #Child earns bending experience
+	}
+}

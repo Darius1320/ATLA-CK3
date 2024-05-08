@@ -196,6 +196,9 @@
  bending_important_event.03.desc:0 "Став мастером клинка, вы готовы расширить свой кругозор на все виды оружия.."
  bending_important_event.03.title:0 "Богоявление!"
  bending_important_event.03.a:0 "Эврика!"
+ bending_important_event.05.desc:0 "Вы получаете некоторый опыт в своих навыках гибки благодаря своей родословной."
+ bending_important_event.05.title:0 "Богоявление!"
+ bending_important_event.05.a:0 "Эврика!"
 
 
 

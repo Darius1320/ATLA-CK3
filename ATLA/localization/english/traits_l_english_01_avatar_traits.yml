@@ -148,9 +148,6 @@
  trait_bending_commander_4:0 "Legendary Elemental Commander"
  trait_bending_commander_4_desc:0 "This character after years of training has an inkling on how to use their abilities to their advantage in times of war."
  trait_bending_commander_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has become war."
- trait_bending_commander_1:0 "Elemental Commander"
- trait_bending_commander_1_desc:0 "This character after years of training has an inkling on how to use their abilities to their advantage in times of war."
- trait_bending_commander_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has just understood how to gain control of their army."
  trait_track_bending_commander:0 "Elemental Commander"
  trait_track_bending_commander_desc:0 "This character after years of training has an inkling on how to use their abilities to their advantage in times of war."
  #Legacies
@@ -199,6 +196,9 @@
  bending_important_event.03.desc:0 "After becoming a master of the blade you're ready to expand your horizons to all weapons."
  bending_important_event.03.title:0 "Epiphany!"
  bending_important_event.03.a:0 "Eureka!"
+ bending_important_event.05.desc:0 "You gain some expertise in your bending skill due to your bloodline."
+ bending_important_event.05.title:0 "Epiphany!"
+ bending_important_event.05.a:0 "Eureka!"
 
 
 

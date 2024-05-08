@@ -1,0 +1,77 @@
+create_artifact_earth_gauntlet_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = earth_gauntlet_name
+		description = earth_gauntlet_description
+		template = earth_gauntlet_template
+		type = trinket
+		visuals = earth_gauntlet
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = earth_gauntlet_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+		history = {
+			type = created_before_history
+		}
+	}
+
+	scope:newly_created_artifact = {
+			set_variable=earth_gauntlet
+}
+
+create_artifact_glider_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = glider_name
+		description = glider_description
+		template = glider_template
+		type = trinket
+		visuals = glider
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = glider_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+		history = {
+			type = created_before_history
+		}
+	}
+
+	scope:newly_created_artifact = {
+			set_variable=glider
+}
+
+create_artifact_fire_nation_a_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = fire_nation_a_name
+		description = fire_nation_a_description
+		template = fire_nation_a_template
+		type = armor
+		visuals = fire_nation_a
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = fire_nation_a_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+		history = {
+			type = created_before_history
+		}
+	}
+
+	scope:newly_created_artifact = {
+			set_variable=fire_nation_a
+}

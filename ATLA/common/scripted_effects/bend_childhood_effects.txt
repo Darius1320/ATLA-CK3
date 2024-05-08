@@ -13,3 +13,108 @@ gain_jing_effect = {
 			}
 		}		
 }
+
+child_bending_effect = {
+        effect = {
+        if = {
+            limit = {
+                has_trait = lifestyle_fire_bender
+                NOT = {
+                    has_trait_xp = {
+                        trait = lifestyle_fire_bender
+                        value >= 100
+                    }
+                }
+            }
+            random_list = {
+                10 = {
+                    add_trait_xp = {
+                        trait = lifestyle_fire_bender
+                        value = 2
+                    }
+                }
+                2 = {
+                    add_trait_xp = {
+                        trait = lifestyle_fire_bender
+                        value = 4
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_trait = lifestyle_water_bender
+                NOT = {
+                    has_trait_xp = {
+                        trait = lifestyle_water_bender
+                        value >= 100
+                    }
+                }
+            }
+            random_list = {
+                10 = {
+                    add_trait_xp = {
+                        trait = lifestyle_water_bender
+                        value = 2
+                    }
+                }
+                2 = {
+                    add_trait_xp = {
+                        trait = lifestyle_water_bender
+                        value = 4
+                    }
+                }
+            }
+        }
+                if = {
+            limit = {
+                has_trait = lifestyle_air_bender
+                NOT = {
+                    has_trait_xp = {
+                        trait = lifestyle_air_bender
+                        value >= 100
+                    }
+                }
+            }
+            random_list = {
+                10 = {
+                    add_trait_xp = {
+                        trait = lifestyle_air_bender
+                        value = 2
+                    }
+                }
+                2 = {
+                    add_trait_xp = {
+                        trait = lifestyle_air_bender
+                        value = 4
+                    }
+                }
+            }
+        }
+                if = {
+            limit = {
+                has_trait = lifestyle_earth_bender
+                NOT = {
+                    has_trait_xp = {
+                        trait = lifestyle_earth_bender
+                        value >= 100
+                    }
+                }
+            }
+            random_list = {
+                10 = {
+                    add_trait_xp = {
+                        trait = lifestyle_earth_bender
+                        value = 2
+                    }
+                }
+                2 = {
+                    add_trait_xp = {
+                        trait = lifestyle_earth_bender
+                        value = 4
+                    }
+                }
+            }
+        }
+    }
+}

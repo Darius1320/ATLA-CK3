@@ -90,3 +90,25 @@ bending_important_event.04 = {
         gain_jing_effect = yes	
         }
 }
+
+bending_important_event.05 = {
+    type = character_event
+    title = bending_important_event.05.title
+    desc = bending_important_event.05.desc
+	trigger = {
+        exists = dynasty
+        dynasty = { has_dynasty_perk = bending_legacy_3 }
+		}
+    theme = faith
+    right_portrait = {
+        character = ROOT
+        animation = happiness
+    }
+    immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+        child_bending_effect = yes
+	}
+    option = {
+        name = bending_important_event.05.a
+	}
+}
